@@ -2,32 +2,42 @@
   {
     "Id":1,
     "Name":"Pearl",
+    "SellRent":1,
     "Type":"Town House",
-    "Price":15000
+    "Price":15000,
+    "Image":"prop1"
   },
   {
     "Id":2,
     "Name":"Zafir",
+    "SellRent":1,
     "Type":"Villa",
-    "Price":20000
+    "Price":20000,
+    "Image":"prop2"
   },
   {
     "Id":3,
     "Name":"Diamnod",
+    "SellRent":2,
     "Type":"Duplex",
-    "Price":10000
+    "Price":10000,
+    "Image":"prop3"
   },
   {
     "Id":4,
     "Name":"Violet",
+    "SellRent":2,
     "Type":"Town House",
-    "Price":15000
+    "Price":15000,
+    "Image":"prop4"
   },
   {
     "Id":5,
     "Name":"Pink",
+    "SellRent":2,
     "Type":"Villa",
-    "Price":20000
+    "Price":20000,
+    "Image":"prop5"
   },
   {
     "Id":6,
