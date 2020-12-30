@@ -13,12 +13,12 @@ import { HousingService } from './services/housing.service';
 import { AddPropertyComponent } from './property/add-property/add-property.component';
 import { PropertyDetailsComponent } from './property/property-details/property-details.component';
 import { RentPropertyComponent } from './property/rent-property/rent-property.component';
-import { BuyPropertyComponent } from './property/buy-property/buy-property.component';
+import { SellPropertyComponent } from './property/sell-property/sell-property.component';
 
 const appRoutes: Routes = [
   {path: '', component: PropertyListComponent},
-  {path: 'rent-property', component: RentPropertyComponent},
-  {path: 'buy-property', component: BuyPropertyComponent},
+  {path: 'rent-property', component: PropertyListComponent},
+  {path: 'Sell-property', component: PropertyListComponent},
   {path: 'add-property', component: AddPropertyComponent},
   {path: 'property-details/:id', component: PropertyDetailsComponent},
   {path: '**', component: PropertyListComponent}

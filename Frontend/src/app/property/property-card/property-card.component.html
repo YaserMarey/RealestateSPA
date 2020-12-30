@@ -1,6 +1,7 @@
     <div class="card">
       <div class="card-img-wrapper">
-        <img class="probImage" src="./assets/images/house-default.png">
+        <img *ngIf="property.Image" class="probImage" src="./assets/images/{{property.Image}}.jpg">
+        <img *ngIf="!property.Image" class="probImage" src="./assets/images/house-default.png">
         <ul class="list-inline text-center member-icons animate">
           <li class="list-inline-item">
             <button class="btn btn-primary" routerLink='/property-details/{{property.Id}}'>
@@ -14,5 +15,7 @@
         <h1>{{property.Name}}</h1>
         <h2>{{property.Type}}</h2>
         <h3>{{property.Price}}</h3>
+        <h4 *ngIf="property.SellRent==1">Sell</h4>
+        <h4 *ngIf="property.SellRent==2">Rent</h4>
       </div>
     </div>
