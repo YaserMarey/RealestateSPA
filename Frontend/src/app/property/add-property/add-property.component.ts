@@ -17,4 +17,8 @@ export class AddPropertyComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  onSubmit(Form){
+    console.log(Form);
+  }
+
 }

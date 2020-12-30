@@ -14,7 +14,7 @@ export class PropertyDetailsComponent implements OnInit {
     this.propertyId = Number(this.route.snapshot.params['id']);
   }
 
-  onSelectNext(){
+  onSelectNext() {
     this.propertyId += 1;
     this.router.navigate(['property-details', this.propertyId]);
   }
