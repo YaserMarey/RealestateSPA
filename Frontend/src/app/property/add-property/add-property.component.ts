@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Route } from '@angular/compiler/src/core';
+// import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,17 +7,19 @@ import { Router } from '@angular/router';
   templateUrl: './add-property.component.html',
   styleUrls: ['./add-property.component.css']
 })
+
 export class AddPropertyComponent implements OnInit {
 
   constructor(private router: Router) { }
 
   ngOnInit() {
   }
+
   onBack() {
     this.router.navigate(['/']);
   }
 
-  onSubmit(Form){
+  onSubmit(Form) {
     console.log(Form);
   }
 
