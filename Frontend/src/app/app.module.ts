@@ -17,6 +17,7 @@ import { RentPropertyComponent } from './property/rent-property/rent-property.co
 import { SellPropertyComponent } from './property/sell-property/sell-property.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserRegisterComponent} from './user/user-register/user-register.component';
+import { UserServiceService } from './services/user-service.service';
 
 
 const appRoutes: Routes = [
@@ -49,7 +50,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
 
   ],
-  providers: [HousingService],
+  providers: [HousingService, UserServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

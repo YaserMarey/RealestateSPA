@@ -9,7 +9,7 @@
           <div class="form-group col-12">
             <label for="name" class="form-label">Name</label>
             <input type="text" class="form-control" formControlName="userName">
-            <span class="error-block" *ngIf="!userName.valid && userName.touched">
+            <span class="error-block" *ngIf="!userName.valid && (userName.touched || formIsSubmitted)">
               Please provide a name
             </span>
           </div>
@@ -17,7 +17,7 @@
           <div class="form-group col-12">
             <label for="email" class="form-label">Email</label>
             <input type="text" class="form-control" formControlName="email">
-            <span *ngIf="!email.valid && email.touched" class="error-block">
+            <span *ngIf="!email.valid && (email.touched || formIsSubmitted)" class="error-block">
               <span *ngIf="email.errors.required">
                 Please provide email
               </span>
@@ -29,7 +29,7 @@
           <div class="form-group col-12">
             <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" formControlName="password">
-            <span *ngIf="!password.valid && password.touched" class="error-block">
+            <span *ngIf="!password.valid && (password.touched || formIsSubmitted)" class="error-block">
               <span *ngIf="password.errors.required">
                   Please provide password
               </span>
@@ -41,7 +41,7 @@
           <div class="form-group col-12">
             <label for="confirm_password" class="form-label">Confirm Password</label>
             <input type="password" class="form-control" formControlName="confirmPassword">
-            <span *ngIf="!confirmPassword.valid && confirmPassword.touched" class="error-block">
+            <span *ngIf="!confirmPassword.valid && (confirmPassword.touched || formIsSubmitted)" class="error-block">
               <span *ngIf="confirmPassword.errors.required">
                 Please confirm password
               </span>
@@ -58,10 +58,6 @@
             <button type="submit" class="btn btn-primary">Save</button>
             <button type="reset" class="btn btn-secondary ml-2">Cacnel</button>
           </div>
-          form values: {{registerationForm.value | json}} <br>
-          form values: {{registerationForm.valid}}<br>
-          confirmPassword notmatched: {{registerationForm.hasError('notmatched')}}
-
         </form>
       </div>
     </div>
